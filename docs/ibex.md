@@ -4,7 +4,7 @@ layout: default
 
 # Implementation of Maze for Ibex
 
-> **Older tools.** This page documents the Ibex implementation of Maze, which is no longer maintained. It is kept for existing projects. For new projects, see [Running Maze in jsPsych](jspsych.md).
+> **Older tools.** This page documents the Ibex implementation of Maze, which is no longer maintained. It is kept for existing projects. For new projects, see [Running A-maze in jsPsych](jspsych.md).
 
 
 To run Maze experiments online, there is a custom Ibex module that runs the Maze task. It is an adaptation of the SPR module, and uses the same timing mechanism as SPR. For general information on using Ibex, please see user documentation at <https://github.com/addrummond/ibex/blob/master/docs/manual.md>.

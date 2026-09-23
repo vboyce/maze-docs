@@ -13,7 +13,7 @@ Note: These instructions were tested with Ubuntu; I believe they generalize to M
 
 # Setting up a server
 
-> **Older tools.** This page documents hosting the Ibex implementation of Maze, which is no longer maintained. It is kept for existing projects. For new projects, see [Running Maze in jsPsych](jspsych.md).
+> **Older tools.** This page documents hosting the Ibex implementation of Maze, which is no longer maintained. It is kept for existing projects. For new projects, see [Running A-maze in jsPsych](jspsych.md).
 
 
 ## On the website

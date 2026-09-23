@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Running Maze in jsPsych
+# Running A-maze in jsPsych
 
 [jspsych-maze](https://github.com/vboyce/jspsych-maze) is a plugin for [jsPsych](https://www.jspsych.org/) 7 that runs the Maze task in a web browser. It replaces the [Ibex implementation](ibex.md), which is older.
 
@@ -73,7 +73,7 @@ The [README](https://github.com/vboyce/jspsych-maze#parameters) has the full par
 - **`on_word_correct`** / **`on_word_wrong`**: functions called after each choice with `{wordIndex, wordsSelected}`. If they return HTML, it replaces the prompt (after a correct choice) or the redo message (after a mistake). Use them for guided practice, or to show the sentence building up.
 - **`show_key_labels`**: key badges under the two words.
 - **`error_message`**, **`redo_message`**: the feedback text.
-- **Styling:** the prompt is `#status`, the words are `#maze-left-word` and `#maze-right-word`, and feedback is `#feedback`, so the display can be restyled with CSS. See [Maze for kids](kid-friendly.md) for a worked example.
+- **Styling:** the prompt is `#status`, the words are `#maze-left-word` and `#maze-right-word`, and feedback is `#feedback`, so the display can be restyled with CSS. For an example, see the kid-friendly theme in jspsych-maze's `source/styles/kid.scss` ([A-maze for kids](kid-friendly.md)).
 
 ## Collecting data
 

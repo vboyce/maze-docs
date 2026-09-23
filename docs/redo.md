@@ -4,7 +4,7 @@ layout: default
 
 # Why I run experiments in 'redo' mode
 
-> The code snippets on this page are for the older Ibex implementation. In [jspsych-maze](jspsych.md), redo mode is the default (`redo: true`).
+> This page was written when redo mode was new. Since then, it has become a common option for the Maze task, and it's the default in [jspsych-maze](jspsych.md) (`redo: true`). The code snippets below are for the older Ibex implementation.
 
 
 The Maze task, as traditionally presented, does not tolerate mistakes. If you make a mistake and select the distractor instead of the correct word, you're done for that sentence. You see an error message, and start the next item. 

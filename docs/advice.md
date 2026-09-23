@@ -4,7 +4,7 @@ layout: default
 
 # Parameter considerations: understanding the available knobs
 
-> This page was written for the older `maze_automate` code. The same parameters (`min_delta`, `min_abs`, `num_to_test`) work the same way in the current [distractor generator](generator.md), so the advice still applies.
+> This page was written for the original distractor generation code (`maze_automate`). The same parameters (`min_delta`, `min_abs`, `num_to_test`) work the same way in the current [distractor generation with Hugging Face models](generator.md), so the advice still applies.
 
 
 Our goal is to get distractors that are individually highly infelicitous in context, but otherwise not easily distinguishable from the correct words. That is, we want to avoid there being obvious effective heuristics for guessing the correct word without processing the sentence. 

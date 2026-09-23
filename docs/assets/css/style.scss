@@ -13,6 +13,12 @@ section {
   padding-bottom:50px;
 }
 
+// The theme fixes the sidebar and footer in place, which breaks once the
+// sidebar is taller than the window. Let them scroll with the page instead.
+header, footer {
+  position:static;
+}
+
 @media print, screen and (max-width:1150px){
 
     div.wrapper {

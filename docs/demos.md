@@ -8,7 +8,7 @@ Try the Maze task yourself. All demos run in the browser, and no data is saved. 
 
 | Demo | What it shows |
 |---|---|
-| [Kid-friendly reading](https://vboyce.github.io/maze-demos/kid-maze-experiment/index.html) | A version for children (8–12): guided practice with tips, key badges, two short passages with pictures, a progress bar, and pause/stop buttons. See [Maze for kids](kid-friendly.md). |
+| [Kid-friendly reading](https://vboyce.github.io/maze-demos/kid-maze-experiment/index.html) | A version for children (8–12): guided practice with tips, key badges, two short passages with pictures, a progress bar, and pause/stop buttons. See [A-maze for kids](kid-friendly.md). |
 | [Targeted sentences with results](https://vboyce.github.io/maze-demos/moderate-experiment/index.html) | Relative-clause and adverb attachment ambiguities in redo mode, then a graph of your own RTs at each word. |
 | [Target and filler sentences](https://vboyce.github.io/maze-demos/critical-experiment/index.html) | Items from [Maze Made Easy](https://www.sciencedirect.com/science/article/pii/S0749596X19301147), traditional style: a mistake ends the sentence (`redo: false`). |
 | [Short vignettes](https://vboyce.github.io/maze-demos/as-maze-experiment/index.html) | Multi-sentence items from [Altmann and Steedman (1988)](https://www.sciencedirect.com/science/article/pii/0010027788900200), where context affects how an ambiguity is resolved. |

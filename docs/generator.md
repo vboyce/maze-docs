@@ -2,16 +2,16 @@
 layout: default
 ---
 
-# Generating distractors
+# Distractor generation with Hugging Face models
 
-[maze-distractor-generator](https://github.com/vboyce/maze-distractor-generator) picks a distractor for every word of your materials. It replaces the [older `maze_automate` code](usage_basic.md). The main differences:
+[maze-distractor-generator](https://github.com/vboyce/maze-distractor-generator) picks a distractor for every word of your materials. It replaces the [original distractor generation code](usage_basic.md) (`maze_automate`) described in Boyce et al. (2020) and Boyce & Levy (2023). The main differences:
 
 - It works with current language models: any Hugging Face causal model (GPT-2, Pythia, Llama, …), masked models (BERT, RoBERTa), or API models via liteLLM.
 - There is a review workflow: mark bad distractors and regenerate just those.
 - The default word list is curated to avoid offensive and sensitive words.
 - It has JSON output for jsPsych.
 
-The idea is the same as before (see [What is A-maze?](intro.md)). For each word, draw candidate words of similar length and frequency, and keep one the language model finds very surprising in that position.
+The idea is the same as before (see [What is A-maze?](intro.md)). It is set up for English; see [A-maze in other languages](non-english.md) for adapting it. For each word, draw candidate words of similar length and frequency, and keep one the language model finds very surprising in that position.
 
 ## Install
 
@@ -58,7 +58,7 @@ Sentences with the same `item_num` share distractors. Without labels they are ma
 - **`model`** and **`backend`**.
 - **`max_repeat`**: how many times any word may be used as a distractor.
 
-The trade-offs between them are discussed in [Parameter considerations](advice.md); `min_delta`, `min_abs` and `num_to_test` mean the same as in the older code. The [README](https://github.com/vboyce/maze-distractor-generator#parameters) has the full table. An unknown key in the parameters file is an error.
+The trade-offs between them are discussed in [Parameter considerations](advice.md); `min_delta`, `min_abs` and `num_to_test` mean the same as in the original code. The [README](https://github.com/vboyce/maze-distractor-generator#parameters) has the full table. An unknown key in the parameters file is an error.
 
 ## Reviewing distractors
 

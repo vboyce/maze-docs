@@ -19,5 +19,5 @@ Here we attempt to create Maze materials that mimic the properties of hand-writt
 
 Ideally in a Maze task it's always obvious which word fits in the context and which does not. With A-maze we do not meet this ideal, but we do get close enough to get useful results anyway. However, using better language models or better parameter choices may get us closer to this ideal.
 
-For a much more involved discussion of A-maze, please read [Boyce, Futrell, and Levy, 2020](https://psyarxiv.com/b7nqd/). Note that the implementation of A-maze has been improved since what is described in the paper; the theory and basic ideas hold true, some of the limitations less so. The current implementation is [maze-distractor-generator](generator.md). 
+For a much more involved discussion of A-maze, please read [Boyce, Futrell, and Levy, 2020](https://psyarxiv.com/b7nqd/). Note that the implementation of A-maze has been improved since what is described in the paper; the theory and basic ideas hold true, some of the limitations less so. The current implementation is [distractor generation with Hugging Face models](generator.md). 
 

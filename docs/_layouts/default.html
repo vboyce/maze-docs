@@ -20,7 +20,6 @@
           <img src="{{site.logo | relative_url}}" alt="Logo" />
         {% endif %}
 
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
 
         <p class="view"><b>Code</b><br>
         <a href="https://github.com/vboyce/jspsych-maze">jspsych-maze</a> (plugin)<br>
@@ -29,23 +28,34 @@
         <a href="https://github.com/vboyce/Maze">Maze</a> (older)</p>
 
         <p><b>Current tools</b><br>
-        <a href="{{ "/jspsych.html" | relative_url}}">Running Maze in jsPsych</a><br>
-        <a href="{{ "/generator.html" | relative_url}}">Generating distractors</a><br>
-        <a href="{{ "/demos.html" | relative_url}}">Demos</a><br>
-        <a href="{{ "/kid-friendly.html" | relative_url}}">Maze for kids</a></p>
+        <a href="{{ "/generator.html" | relative_url}}">Distractor generation (Hugging Face models)</a><br>
+        <a href="{{ "/jspsych.html" | relative_url}}">Running A-maze in jsPsych</a><br>
+        <a href="{{ "/kid-friendly.html" | relative_url}}">A-maze for kids</a><br>
+        <a href="{{ "/non-english.html" | relative_url}}">A-maze in other languages</a></p>
+
+        <p><b>Demos</b><br>
+        <a href="{{ "/demos.html" | relative_url}}">All demos</a><br>
+        <a href="https://vboyce.github.io/maze-demos/kid-maze-experiment/index.html">Kid-friendly reading</a><br>
+        <a href="https://vboyce.github.io/maze-demos/moderate-experiment/index.html">Sentences with RT graph</a><br>
+        <a href="https://vboyce.github.io/maze-demos/critical-experiment/index.html">Sentences without redo</a><br>
+        <a href="https://vboyce.github.io/maze-demos/as-maze-experiment/index.html">Short vignettes</a><br>
+        <a href="https://vboyce.github.io/maze-demos/ns-maze-experiment/index.html">Natural Stories story</a></p>
 
         <p><b>Background</b><br>
         <a href="{{ "/intro.html" | relative_url}}">What is A-maze?</a><br>
+        <a href="{{ "/papers.html" | relative_url}}">Papers using A-maze</a><br>
         <a href="{{ "/redo.html" | relative_url}}">An argument for 'redo' mode</a><br>
         <a href="{{ "/delay.html" | relative_url}}">Adding a delay to 'redo' mode</a><br>
         <a href="{{ "/experiments.html" | relative_url}}">Experiment design</a><br>
         <a href="{{ "/advice.html" | relative_url}}">Parameter considerations</a></p>
 
-        <p><b>Older tools (A-maze / Ibex)</b><br>
+        <p><b>Older tools</b><br>
+        <i>Original distractor generation (Boyce et al. 2020; Boyce &amp; Levy 2023)</i><br>
         <a href="{{ "/install.html" | relative_url}}">Install instructions</a><br>
         <a href="{{ "/usage_basic.html" | relative_url}}">Basic use</a><br>
         <a href="{{ "/parameters.html" | relative_url}}">Parameters</a><br>
         <a href="{{ "/usage_adv.html" | relative_url}}">Advanced options</a><br>
+        <i>Ibex</i><br>
         <a href="{{ "/ibex.html" | relative_url}}">Using Ibex for Maze</a><br>
         <a href="{{ "/server.html" | relative_url}}">Hosting an Ibex-Maze server</a></p>
       </header>

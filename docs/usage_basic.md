@@ -4,7 +4,7 @@ layout: default
 
 # Experimental pipeline for using A-maze
 
-> **Older tools.** This page documents the original A-maze code (`maze_automate`), which is no longer maintained. It is kept for existing projects. For new projects, see [Generating distractors](generator.md) and [Running Maze in jsPsych](jspsych.md).
+> **Older tools.** This page documents the original distractor generation code (`maze_automate`), as described in Boyce et al. (2020) and Boyce & Levy (2023). It is no longer maintained, and is kept for existing projects. For new projects, see [distractor generation with Hugging Face models](generator.md) and [Running A-maze in jsPsych](jspsych.md).
 
 
 The pipeline for running an A-maze experiment is similar to running an SPR experiment. 

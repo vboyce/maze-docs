@@ -5,7 +5,7 @@ layout: default
 
 # Parameters
 
-> **Older tools.** This page documents the original A-maze code (`maze_automate`), which is no longer maintained. It is kept for existing projects. For new projects, see [Generating distractors](generator.md).
+> **Older tools.** This page documents the original distractor generation code (`maze_automate`), as described in Boyce et al. (2020) and Boyce & Levy (2023). It is no longer maintained, and is kept for existing projects. For new projects, see [distractor generation with Hugging Face models](generator.md).
 
 
 In addition to the input and output file locations, the program also gets a list of parameters from a parameters file. By default, it uses `params.txt`, but you can specify another file to change parameter values.
