@@ -1,0 +1,6 @@
+title: Maze
+logo:
+description: "The Maze task with automatically generated distractors: a jsPsych plugin, a distractor generator, demos, and guides."
+show_downloads: false
+google_analytics:
+theme: jekyll-theme-minimal
