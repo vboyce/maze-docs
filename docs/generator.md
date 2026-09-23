@@ -76,7 +76,7 @@ Some automatic distractors will be plausible continuations, or words you don't w
    ```
    Everything not rejected is kept. `stimuli.js` has the final distractors for every sentence. Repeat with `review_2.csv` as needed.
 
-Other checks: `check_distractors.py` asks an LLM whether each distractor is a grammatical continuation (one paid API call per word; LLM judgments aren't necessarily trustworthy). Or pilot the materials and regenerate distractors that several participants get wrong.
+Other checks: pilot the materials and regenerate distractors that several participants get wrong. `check_distractors.py`, which asks an LLM whether each distractor is a grammatical continuation, is experimental. In a test run it judged 8% of real words ungrammatical, so it isn't reliable yet.
 
 ## Which model?
 
