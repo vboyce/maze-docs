@@ -12,13 +12,21 @@ The [distractor generator](generator.md) is set up for English. Nothing in the m
 
 ## What to change in the generator
 
-**Word list.** Point `include_words` in your parameters file at a list of candidate words for your language (one per line), and `exclude_words` at a list of words to never use. English's `curated_word_list.txt` took a fair amount of hand-filtering. Budget for that, especially if participants are children.
+Set three things in your parameters file:
 
-**Dictionary class.** The dictionary class (set with `dictionary_loc` / `dictionary_class`) supplies the candidates and their frequencies. `wordfreq_English_dict` in `wordfreq_distractor.py` uses English frequencies from [wordfreq](https://github.com/rspeer/wordfreq), which has data for about 40 languages. It also keeps only words matching `^[a-z]*$`. Copy the class and change the language code and the allowed characters. `wordfreq_French_dict`, in the same file, is an unfinished example; it expects a French word list that isn't included.
+```
+language: "fr"                      # a wordfreq language code
+include_words: "french_words.txt"   # candidate distractors, one per line
+model: "<a French or multilingual Hugging Face model>"
+```
 
-**Length and frequency matching.** The threshold function (`threshold_loc` / `threshold_name`, default `get_thresholds`) looks up the correct word's frequency in **English** (`wordfreq.zipf_frequency(word, 'en')`). You need a copy that uses your language's code, or candidates will be matched against English frequencies. Word length in characters also means different things across writing systems.
+**`language`** is a [wordfreq](https://github.com/rspeer/wordfreq) language code; wordfreq has frequency data for about 40 languages. Frequencies for both the candidate distractors and the real words come from that language, so candidates are matched to your words on length and frequency. An unknown code is an error.
 
-**Language model.** Any Hugging Face causal or masked model works (`model`, `backend`). Use one trained on your language, either monolingual or a multilingual model with good coverage of it. It's worth checking that the model gives sensible surprisals on a few of your sentences before generating everything (`get_surprisal.py`).
+**`include_words`** is required outside English; there is no default word list for other languages. Candidates must be all-lowercase letters (accented letters are fine), which drops proper nouns and abbreviations. English's `curated_word_list.txt` took a fair amount of hand-filtering (offensive words, sensitive topics). Budget for that, especially if participants are children. Use `exclude_words` for words to never use.
+
+**`model`** can be any Hugging Face causal or masked model (`backend`). Use one trained on your language, either monolingual or a multilingual model with good coverage of it. It's worth checking that it gives sensible surprisals on a few of your sentences before generating everything (`get_surprisal.py`).
+
+If you need different rules for which words are allowed, copy `wordfreq_dict` in `wordfreq_distractor.py` and set `dictionary_class` to your class.
 
 ## Things to think about
 
