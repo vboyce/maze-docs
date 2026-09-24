@@ -19,7 +19,7 @@ If you use A-maze, please cite these, along with the language model you used. Th
 
 ## Current tools
 
-- **[Distractor generation with Hugging Face models](generator.md)** ([maze-distractor-generator](https://github.com/vboyce/maze-distractor-generator)). Uses any Hugging Face causal or masked language model, or API models. It has a workflow for reviewing distractors and regenerating bad ones, and a default word list curated to avoid offensive and sensitive words.
+- **[Distractor generation with Hugging Face models](generator.md)** ([maze-distractor-generator](https://github.com/vboyce/maze-distractor-generator)). Uses any Hugging Face causal or masked language model. It has a workflow for reviewing distractors and regenerating bad ones, and a default word list curated to avoid offensive and sensitive words.
 - **[Running A-maze in jsPsych](jspsych.md)** ([jspsych-maze](https://github.com/vboyce/jspsych-maze)). A [jsPsych](https://www.jspsych.org/) plugin for the Maze task, with "redo" mode, a delay after mistakes, custom feedback, and styling with CSS.
 - **[A-maze for kids](kid-friendly.md)** and **[A-maze in other languages](non-english.md)**.
 

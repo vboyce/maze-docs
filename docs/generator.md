@@ -6,7 +6,7 @@ layout: default
 
 [maze-distractor-generator](https://github.com/vboyce/maze-distractor-generator) picks a distractor for every word of your materials. It replaces the [original distractor generation code](usage_basic.md) (`maze_automate`) described in Boyce et al. (2020) and Boyce & Levy (2023). The main differences:
 
-- It works with current language models: any Hugging Face causal model (GPT-2, Pythia, Llama, …), masked models (BERT, RoBERTa), or API models via liteLLM.
+- It works with current language models: any Hugging Face causal model (GPT-2, Pythia, Llama, …) or masked model (BERT, RoBERTa).
 - There is a review workflow: mark bad distractors and regenerate just those.
 - The default word list is curated to avoid offensive and sensitive words.
 - It has JSON output for jsPsych.
