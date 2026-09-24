@@ -4,11 +4,11 @@ layout: default
 
 # A-maze for kids
 
-A-maze can be used with children. We've used it with 8–12 year olds in [kid-maze-passages](https://github.com/vboyce/kid-maze-passages), run on Children Helping Science. Compared with a standard adult setup, three things help.
+We are currently running A-maze with children, although that is a work in progress, so we do not yet know how well it works at which ages. We are running it with 8–12-year-olds in [kid-maze-passages](https://github.com/vboyce/kid-maze-passages), on Children Helping Science. Compared with a standard adult setup, there are three things we changed that we hope make it work well for kids.
 
-**A restricted distractor list.** Children will see every distractor, so the word list matters more. The current [distractor generator](generator.md)'s default list (`curated_word_list.txt`) excludes offensive words, and (to a lesser extent) words about violence and other sensitive topics. Words can also be added to `exclude.txt`. Even so, [review the distractors](generator.md#reviewing-distractors) before running a study with children.
+**A restricted distractor list.** We are more careful about the distractors. The current [distractor generator](generator.md)'s default list (`curated_word_list.txt`) excludes offensive and sensitive (sexual, violent, religious) words. Words can also be added to `exclude.txt`. Even so, [review the distractors](generator.md#reviewing-distractors) before running a study with children.
 
-**A gentler introduction.** The task isn't natural, so kids need to understand it before the real items start. The kid version has:
+**A gentler introduction.** We want to avoid frustration and ease children into the task more. The kid version has:
 - a picture of where to put their fingers;
 - three practice sentences that fade out the help. The first gives a tip for every word and shows the sentence building up; the second only shows the sentence building up; the third has no help;
 - key badges (E and I) under the words;
@@ -20,6 +20,6 @@ A-maze can be used with children. We've used it with 8–12 year olds in [kid-ma
 
 ## Try it
 
-The **[kid-friendly demo](https://vboyce.github.io/maze-demos/kid-maze-experiment/index.html)** is the kid-maze-passages experiment without the consent pages: the introduction, practice, and two short passages (dinosaurs and whales).
+The **[kid-friendly demo](https://vboyce.github.io/maze-demos/kid-maze-experiment/index.html)** is the kid-maze-passages experiment (without the consent pages): the introduction, practice, and two short passages (dinosaurs and whales).
 
-The code is in [jspsych-maze](https://github.com/vboyce/jspsych-maze): `source/src/kid-maze-experiment.js` and `source/src/kid/` for the timeline, and `source/styles/kid.scss` for the look. It's a good starting point for a kids' study. The styling only applies under a `kid-maze` class on the page, so it can be reused without affecting anything else.
+The code is in [jspsych-maze](https://github.com/vboyce/jspsych-maze): `source/src/kid-maze-experiment.js` and `source/src/kid/` for the timeline, and `source/styles/kid.scss` for the look. The styling only applies under a `kid-maze` class on the page, so it can be reused without affecting anything else.

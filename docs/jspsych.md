@@ -59,7 +59,7 @@ Each trial records:
 
 - **`rt`**: ms to the first key press on each word reached.
 - **`correct`**: 1 if that first press was right, else 0.
-- **`cumrt`**: ms from the word appearing to the correct press. This includes wrong presses, the delay and the error guard. When a `redo: false` trial ends on a mistake, that word's entry is `null`. `rt`, `correct` and `cumrt` always have the same length.
+- **`cumrt`**: cumulative RT, ms from the word appearing to the correct press. This includes wrong presses, the delay and the error guard. When a `redo: false` trial ends on a mistake, that word's entry is `null`. `rt`, `correct` and `cumrt` always have the same length.
 - **`words`, `distractors`**: the sentence and distractors, split into words.
 - **`order`**: for each position, 0 if the correct word was on the left, 1 if on the right.
 

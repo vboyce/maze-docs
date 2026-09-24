@@ -7,11 +7,11 @@ layout: default
 [maze-distractor-generator](https://github.com/vboyce/maze-distractor-generator) picks a distractor for every word of your materials. It replaces the [original distractor generation code](usage_basic.md) (`maze_automate`) described in Boyce et al. (2020) and Boyce & Levy (2023). The main differences:
 
 - It works with current language models: any Hugging Face causal model (GPT-2, Pythia, Llama, …) or masked model (BERT, RoBERTa).
-- There is a review workflow to make it easier to tweak distractors as a researcher: you can mark bad distractors in a csv and regenerate just those.
+- There is a review workflow to make it easier to tweak distractors as a researcher: you can mark bad distractors in a CSV and regenerate just those.
 - There is a "kid-friendly" word list that is curated to avoid offensive and sensitive (sexual, violent, religious) words. You can also provide your own word list, or build your own blacklist. 
 - It has JSON output for jsPsych.
 
-The idea is the same as before (see [What is A-maze?](intro.md)). It is set up for English; see [A-maze in other languages](non-english.md) for adapting it. For each word, the process draws candidate words of similar length and frequency, and keeps the one the language model finds very surprising in that position.
+The idea is the same as before (see [What is A-maze?](intro.md)). It is set up for English; see [A-maze in other languages](non-english.md) for adapting it. For each word, the process draws candidate words of similar length and frequency, and keeps one that the language model finds surprising enough in that position.
 
 ## Install
 
@@ -77,12 +77,12 @@ Some automatic distractors will be plausible continuations, or words you don't w
    Everything not rejected is kept. `stimuli.js` has the final distractors for every sentence. Repeat with `review_2.csv` as needed.
 
 Other checks:
-* you could pilot the materials and regenerate distractors that several participants get wrong, as an empirical measure of "too plausible"
-* we tried using LLMs to check for plausibility (see `check_distractors.py`), but so far it is unreliable in both directions. Possibly a better framework in this direction would yield better outcomes. 
+- You could pilot the materials and regenerate distractors that several participants get wrong, as an empirical measure of "too plausible".
+- We tried using LLMs to check for plausibility (see `check_distractors.py`), but so far it is unreliable in both directions. Possibly a better framework in this direction would yield better outcomes. 
 
 ## Which model?
 
-The psycholinguistics literature suggests that roughly gpt2 size models give a good fit to human surprisal, and for this purpose, we don't need precision. Small causal models work well and run quickly on a laptop; we have used `gpt2`, `distilgpt2` and `EleutherAI/pythia-160m`. `benchmark.py` compares the run time of several models on the same input. Larger models give better surprisal estimates but are slower.
+The psycholinguistics literature suggests that roughly GPT-2-size models give a good fit to human surprisal, and for this purpose, we don't need precision. Small causal models work well and run quickly on a laptop; we have used `gpt2`, `distilgpt2` and `EleutherAI/pythia-160m`. `benchmark.py` compares the run time of several models on the same input.
 
 ## Citing
 
