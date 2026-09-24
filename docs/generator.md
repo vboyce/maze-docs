@@ -83,3 +83,7 @@ Other checks:
 ## Which model?
 
 The psycholinguistics literature suggests that roughly gpt2 size models give a good fit to human surprisal, and for this purpose, we don't need precision. Small causal models work well and run quickly on a laptop; we have used `gpt2`, `distilgpt2` and `EleutherAI/pythia-160m`. `benchmark.py` compares the run time of several models on the same input. Larger models give better surprisal estimates but are slower.
+
+## Citing
+
+There isn't yet a separate publication for the newer distractor generation (with Hugging Face models). If you use it, please cite one of the A-maze papers ([Boyce, Futrell, & Levy, 2020](https://www.sciencedirect.com/science/article/pii/S0749596X19301147) or [Boyce & Levy, 2023](https://escholarship.org/uc/item/6vh9d8zm)), plus the specific language model you used to generate distractors.

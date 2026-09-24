@@ -15,7 +15,7 @@ The **Maze task** is an incremental reading task. Participants read a sentence o
 - V. Boyce, R. Futrell, R. P. Levy (2020). [Maze Made Easy: Better and easier measurement of incremental processing difficulty](https://www.sciencedirect.com/science/article/pii/S0749596X19301147). *Journal of Memory and Language*. ([preprint](https://psyarxiv.com/b7nqd/))
 - V. Boyce, R. P. Levy (2023). [A-maze of Natural Stories: Comprehension and surprisal in the Maze task](https://escholarship.org/uc/item/6vh9d8zm). *Glossa Psycholinguistics*.
 
-If you use A-maze, please cite these, along with the language model you used. There's more on the method in [What is A-maze?](intro.md), and a list of [papers using A-maze](papers.md). You can try the task in the [demos](demos.md).
+If you use A-maze, please cite these, along with the language model you used. There isn't yet a separate publication for the newer distractor generation (with Hugging Face models). If you use it, please cite one of the A-maze papers (Boyce, Futrell, & Levy, 2020, or Boyce & Levy, 2023), plus the specific language model you used to generate distractors. There's more on the method in [What is A-maze?](intro.md), and a list of [papers using A-maze](papers.md). You can try the task in the [demos](demos.md).
 
 ## Current tools
 
