@@ -7,11 +7,11 @@ layout: default
 [maze-distractor-generator](https://github.com/vboyce/maze-distractor-generator) picks a distractor for every word of your materials. It replaces the [original distractor generation code](usage_basic.md) (`maze_automate`) described in Boyce et al. (2020) and Boyce & Levy (2023). The main differences:
 
 - It works with current language models: any Hugging Face causal model (GPT-2, Pythia, Llama, …) or masked model (BERT, RoBERTa).
-- There is a review workflow: mark bad distractors and regenerate just those.
-- The default word list is curated to avoid offensive and sensitive words.
+- There is a review workflow to make it easier to tweak distractors as a researcher: you can mark bad distractors in a csv and regenerate just those.
+- There is a "kid-friendly" word list that is curated to avoid offensive and sensitive (sexual, violent, religious) words. You can also provide your own word list, or build your own blacklist. 
 - It has JSON output for jsPsych.
 
-The idea is the same as before (see [What is A-maze?](intro.md)). It is set up for English; see [A-maze in other languages](non-english.md) for adapting it. For each word, draw candidate words of similar length and frequency, and keep one the language model finds very surprising in that position.
+The idea is the same as before (see [What is A-maze?](intro.md)). It is set up for English; see [A-maze in other languages](non-english.md) for adapting it. For each word, the process draws candidate words of similar length and frequency, and keeps the one the language model finds very surprising in that position.
 
 ## Install
 
@@ -58,7 +58,7 @@ Sentences with the same `item_num` share distractors. Without labels they are ma
 - **`model`** and **`backend`**.
 - **`max_repeat`**: how many times any word may be used as a distractor.
 
-The trade-offs between them are discussed in [Parameter considerations](advice.md); `min_delta`, `min_abs` and `num_to_test` mean the same as in the original code. The [README](https://github.com/vboyce/maze-distractor-generator#parameters) has the full table. An unknown key in the parameters file is an error.
+The trade-offs between them are discussed in [Parameter considerations](advice.md); `min_delta`, `min_abs` and `num_to_test` mean the same as in the original code. A distractor only has to be surprising *enough*: at least `min_delta` bits more than the real word and at least `min_abs` bits overall. The generator takes the first candidate that clears both. The [README](https://github.com/vboyce/maze-distractor-generator#parameters) has the full table. An unknown key in the parameters file is an error.
 
 ## Reviewing distractors
 
@@ -76,8 +76,10 @@ Some automatic distractors will be plausible continuations, or words you don't w
    ```
    Everything not rejected is kept. `stimuli.js` has the final distractors for every sentence. Repeat with `review_2.csv` as needed.
 
-Other checks: pilot the materials and regenerate distractors that several participants get wrong. `check_distractors.py`, which asks an LLM whether each distractor is a grammatical continuation, is experimental. In a test run it judged 8% of real words ungrammatical, so it isn't reliable yet.
+Other checks:
+* you could pilot the materials and regenerate distractors that several participants get wrong, as an empirical measure of "too plausible"
+* we tried using LLMs to check for plausibility (see `check_distractors.py`), but so far it is unreliable in both directions. Possibly a better framework in this direction would yield better outcomes. 
 
 ## Which model?
 
-Small causal models work well and run quickly on a laptop; we have used `gpt2`, `distilgpt2` and `EleutherAI/pythia-160m`. `benchmark.py` compares the run time of several models on the same input. Larger models give better surprisal estimates but are slower. Because surprisal comes from subword tokens, words split into many tokens get higher surprisal; that's one reason the targets are thresholds rather than exact values.
+The psycholinguistics literature suggests that roughly gpt2 size models give a good fit to human surprisal, and for this purpose, we don't need precision. Small causal models work well and run quickly on a laptop; we have used `gpt2`, `distilgpt2` and `EleutherAI/pythia-160m`. `benchmark.py` compares the run time of several models on the same input. Larger models give better surprisal estimates but are slower.
